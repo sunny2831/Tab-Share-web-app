@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tab total:</strong>
+  <%= @tab.tab_total %>
+</p>
+
+<p>
+  <strong>Initial amount owed:</strong>
+  <%= @tab.initial_amount_owed %>
+</p>
+
+<p>
+  <strong>Owed by user:</strong>
+  <%= @tab.owed_by_user_id %>
+</p>
+
+<p>
+  <strong>Owed to user:</strong>
+  <%= @tab.owed_to_user_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tab.description %>
+</p>
+
+<%= link_to 'Edit', edit_tab_path(@tab) %> |
+<%= link_to 'Back', tabs_path %>

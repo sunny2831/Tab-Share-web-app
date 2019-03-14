@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tab_total: 1.5
+  initial_amount_owed: 1.5
+  owed_by_user_id: 1
+  owed_to_user_id: 1
+  description: MyString
+
+two:
+  tab_total: 1.5
+  initial_amount_owed: 1.5
+  owed_by_user_id: 1
+  owed_to_user_id: 1
+  description: MyString

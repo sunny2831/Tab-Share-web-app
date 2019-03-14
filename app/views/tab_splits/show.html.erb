@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tab_split.user_id %>
+</p>
+
+<p>
+  <strong>Tab:</strong>
+  <%= @tab_split.tab_id %>
+</p>
+
+<p>
+  <strong>Payment pending:</strong>
+  <%= @tab_split.payment_pending %>
+</p>
+
+<%= link_to 'Edit', edit_tab_split_path(@tab_split) %> |
+<%= link_to 'Back', tab_splits_path %>

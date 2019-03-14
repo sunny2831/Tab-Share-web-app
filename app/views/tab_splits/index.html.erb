@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tab Splits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Tab</th>
+      <th>Payment pending</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tab_splits.each do |tab_split| %>
+      <tr>
+        <td><%= tab_split.user_id %></td>
+        <td><%= tab_split.tab_id %></td>
+        <td><%= tab_split.payment_pending %></td>
+        <td><%= link_to 'Show', tab_split %></td>
+        <td><%= link_to 'Edit', edit_tab_split_path(tab_split) %></td>
+        <td><%= link_to 'Destroy', tab_split, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tab Split', new_tab_split_path %>

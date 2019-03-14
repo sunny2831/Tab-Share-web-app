@@ -1,0 +1,42 @@
+<%= form_with(model: tab, local: true) do |form| %>
+  <% if tab.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tab.errors.count, "error") %> prohibited this tab from being saved:</h2>
+
+      <ul>
+      <% tab.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :tab_total %>
+    <%= form.text_field :tab_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :initial_amount_owed %>
+    <%= form.text_field :initial_amount_owed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :owed_by_user_id %>
+    <%= form.number_field :owed_by_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :owed_to_user_id %>
+    <%= form.number_field :owed_to_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

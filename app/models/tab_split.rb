@@ -1,0 +1,2 @@
+class TabSplit < ApplicationRecord
+end

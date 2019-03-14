@@ -1,0 +1,32 @@
+<%= form_with(model: tab_split, local: true) do |form| %>
+  <% if tab_split.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tab_split.errors.count, "error") %> prohibited this tab_split from being saved:</h2>
+
+      <ul>
+      <% tab_split.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tab_id %>
+    <%= form.number_field :tab_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :payment_pending %>
+    <%= form.check_box :payment_pending %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

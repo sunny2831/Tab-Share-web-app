@@ -1,0 +1,2 @@
+module TabSplitsHelper
+end
