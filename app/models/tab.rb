@@ -17,7 +17,7 @@ class Tab < ApplicationRecord
 
   belongs_to :owed_to_user,
     class_name: 'User',
-    foreign_key: :
+    foreign_key: :owed_to_user_id
 
   def users
     return [self.owed_by_user, self.owed_to_user]
@@ -51,9 +51,9 @@ class Tab < ApplicationRecord
 
   def owed_to_user
     if self.balance > 0
-      return User.find(self.owed_to_at_creation_user_id)
+      return User.find(self.owed_to_user_id)
     else
-      return User.find(self.owing_at_creation_user_id)
+      return User.find(self.owing_by_user_id)
     end
   end
 
